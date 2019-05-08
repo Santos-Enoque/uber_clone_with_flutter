@@ -77,6 +77,10 @@ PODS:
     - GoogleUtilities/Environment (~> 5.2)
     - GoogleUtilities/UserDefaults (~> 5.2)
   - Flutter (1.0.0)
+  - geolocator (4.0.3):
+    - Flutter
+  - google_api_availability (2.0.0):
+    - Flutter
   - google_maps_flutter (0.0.1):
     - Flutter
     - GoogleMaps
@@ -129,6 +133,8 @@ PODS:
   - leveldb-library (1.20)
   - location (0.0.1):
     - Flutter
+  - location_permissions (2.0.1):
+    - Flutter
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
@@ -142,8 +148,11 @@ DEPENDENCIES:
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
   - firebase_database (from `.symlinks/plugins/firebase_database/ios`)
   - Flutter (from `.symlinks/flutter/ios`)
+  - geolocator (from `.symlinks/plugins/geolocator/ios`)
+  - google_api_availability (from `.symlinks/plugins/google_api_availability/ios`)
   - google_maps_flutter (from `.symlinks/plugins/google_maps_flutter/ios`)
   - location (from `.symlinks/plugins/location/ios`)
+  - location_permissions (from `.symlinks/plugins/location_permissions/ios`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -177,10 +186,16 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/firebase_database/ios"
   Flutter:
     :path: ".symlinks/flutter/ios"
+  geolocator:
+    :path: ".symlinks/plugins/geolocator/ios"
+  google_api_availability:
+    :path: ".symlinks/plugins/google_api_availability/ios"
   google_maps_flutter:
     :path: ".symlinks/plugins/google_maps_flutter/ios"
   location:
     :path: ".symlinks/plugins/location/ios"
+  location_permissions:
+    :path: ".symlinks/plugins/location_permissions/ios"
 
 SPEC CHECKSUMS:
   BoringSSL-GRPC: 2a230d9cd93e7ce39916044f645cebb31f37dde6
@@ -197,6 +212,8 @@ SPEC CHECKSUMS:
   FirebaseFirestore: e1f9c44452d0de51a68b08af8c131c22ca6ce8fa
   FirebaseInstanceID: a122b0c258720cf250551bb2bedf48c699f80d90
   Flutter: 9d0fac939486c9aba2809b7982dfdbb47a7b0296
+  geolocator: 191e1ae5853d9d142e9c3c71fe79eb9ff154cf24
+  google_api_availability: 80c105ad2c0ed01c18cf779653da2cb939518192
   google_maps_flutter: 6449d5918d3f1a69a37dc9c557bbad7bb9bcf0e9
   GoogleAppMeasurement: 1624046ab1bcc5e170061a56ef5679000b079c8e
   GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
@@ -206,6 +223,7 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   location: 26c90953ad5916331d0d1d913898779910416487
+  location_permissions: 37b923ed4b9df9dfe9edb109fb4298f7b182047b
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 7a877b7f3e5964e3fce995e2eb323dbc6831bb5a
 
