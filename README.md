@@ -4,7 +4,7 @@ This is a clone of the famous application Uber, and its done with the flutter fr
 
 <img src="lib/images/ss.png" width=300 height=460>
 
-### Don't forget to insert your APIKEY for the project work
+### Don't forget to insert your APIKEY for the project to work
 * insert you Api key for android (android ->> app ->> src ->> main ->> manifest)
 * insert your Api key for Ios (ios ->> runner ->> appdelegate.m)
 
