@@ -2,7 +2,7 @@
 
 This is a clone of the famous application Uber, and its done with the flutter frame work, this particular repo, contains the code for the rider side
 
-![](lib/images/ss.png)
+<img src="lib/images/ss.png" width=300 height=460>
 
 ## Authors Information
 My name is Santos Enoque, I am a flutter and python developer, for more information please check the links bellow.
