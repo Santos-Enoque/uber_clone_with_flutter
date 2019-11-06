@@ -7,6 +7,7 @@ import 'package:uber_clone/requests/google_maps_requests.dart';
 class AppState with ChangeNotifier {
   static LatLng _initialPosition;
   LatLng _lastPosition = _initialPosition;
+  bool locationServiceActive = true;
   final Set<Marker> _markers = {};
   final Set<Polyline> _polyLines = {};
   GoogleMapController _mapController;
@@ -22,14 +23,17 @@ class AppState with ChangeNotifier {
 
   AppState() {
     _getUserLocation();
+    _loadingInitialPosition();
   }
 // ! TO GET THE USERS LOCATION
   void _getUserLocation() async {
+    print("GET USER METHOD RUNNING =========");
     Position position = await Geolocator()
         .getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
     List<Placemark> placemark = await Geolocator()
         .placemarkFromCoordinates(position.latitude, position.longitude);
     _initialPosition = LatLng(position.latitude, position.longitude);
+    print("the latitude is: ${position.longitude} and th longitude is: ${position.longitude} ");
     print("initial position is : ${_initialPosition.toString()}");
     locationController.text = placemark[0].name;
     notifyListeners();
@@ -125,5 +129,15 @@ class AppState with ChangeNotifier {
   void onCreated(GoogleMapController controller) {
     _mapController = controller;
     notifyListeners();
+  }
+
+//  LOADING INITIAL POSITION
+  void _loadingInitialPosition()async{
+    await Future.delayed(Duration(seconds: 5)).then((v) {
+      if(_initialPosition == null){
+        locationServiceActive = false;
+        notifyListeners();
+      }
+    });
   }
 }
